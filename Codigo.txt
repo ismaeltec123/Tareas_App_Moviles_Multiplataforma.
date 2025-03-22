@@ -1,0 +1,65 @@
+void main() {
+  String nombre = 'Ismael';
+  var apellido = 'Quispe';
+
+  String saludo = "Hola, $nombre";
+
+  String despedida = "Adios, $apellido";
+
+  print(saludo);
+  print(despedida);
+
+  int edad = 100;
+  double altura = 1.73;
+
+  print("Edad: $edad");
+  print("Altura $altura");
+
+  
+  List<int> numeros = [1, 2, 3, 4, 5, 6];
+  for (var numero in numeros) {
+    if (numero < 6) print(numero);
+  }
+
+
+  int min= numeros[0];
+  for (int number in numeros) {
+    if (number < min) {
+      min = number;
+    }
+  }
+  print ("El menor numero es: $min");
+
+  int max= numeros[0];
+  for (int number in numeros) {
+    if (number > max) {
+      max = number;
+    }
+  }
+  print ("El mayor numero es: $max");
+  
+  double promedio= 0;
+  int i =0;
+  for (int number in numeros) {
+    promedio += number;
+    i++;
+    
+  }
+ 
+  promedio=promedio/i;
+  print ("El Promedio es: $promedio");
+  
+  int sumaImpar = 0;
+  
+  for (int number in numeros) {
+    if (number %2!=0) {
+      sumaImpar+=number;
+    }
+  }
+  print ("La suma Impar es: $sumaImpar");
+  
+  
+}
+  
+  
+  
