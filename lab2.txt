@@ -1,0 +1,41 @@
+class Alumno {
+  String? nombres;
+  String? apellidos;
+
+  int? nota_1;
+
+  int? nota_2;
+
+  int? nota_3;
+
+  Alumno(this.nombres, this.apellidos, this.nota_1, this.nota_2, this.nota_3);
+
+  @override
+  String toString() {
+    return 'nombre: $nombres | apellidos: $apellidos';
+  }
+
+  String toStringNotas() {
+    return 'nota 1: $nota_1 | nota 2: $nota_2  ! nota 3: $nota_3';
+  }
+
+  Alumno.notas(this.nota_1, this.nota_2, this.nota_3);
+}
+
+void main() {
+  Alumno abcd = Alumno('Ismael', 'Quispe Arias', null, null, null);
+
+  abcd.nota_1 = 4;
+  abcd.nota_2 = 20;
+  abcd.nota_3 = 15;
+
+  Alumno luisito = Alumno.notas(4, 5, 3);
+
+  luisito.nombres = 'Luis';
+  luisito.apellidos = 'Gonzales';
+
+  print(abcd.toString());
+  print(abcd.toStringNotas());
+  print(luisito.toString());
+  print(luisito.toStringNotas());
+}
